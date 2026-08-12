@@ -1,0 +1,55 @@
+================================================================
+NMAP NETWORK SCAN RESULTS
+================================================================
+Target IP:        10.0.2.15 (Kali Linux VM - self-scan)
+Scan Date:        2026-08-12
+Scanning Machine: Kali Linux VM
+Network:          VirtualBox NAT (default adapter)
+
+================================================================
+SCAN 1: BASIC SCAN
+Command: nmap 10.0.2.15
+================================================================
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-08-12 19:26 -0400
+Nmap scan report for 10.0.2.15
+Host is up (0.000076s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap done: 1 IP address (1 host up) scanned in 9.32 seconds
+
+
+================================================================
+SCAN 2: SERVICE VERSION SCAN
+Command: sudo nmap -sV 10.0.2.15
+================================================================
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-08-12 19:29 -0400
+Nmap scan report for 10.0.2.15
+Host is up (0.000078s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 10.3p1 Debian 4 (protocol 2.0)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 11.08 seconds
+
+
+================================================================
+SCAN 3: OS DETECTION SCAN
+Command: sudo nmap -O 10.0.2.15
+================================================================
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-08-12 19:35 -0400
+Nmap scan report for 10.0.2.15
+Host is up (0.00014s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT   STATE SERVICE
+22/tcp open  ssh
+Warning: OSScan results may be unreliable because we could not find at least
+1 open and 1 closed port
+Aggressive OS guesses: Linux 5.0 - 6.2 (96%), HP P2000 G3 NAS device (92%),
+Linux 3.7 - 4.19 (91%), Android 7.0 (Linux 3.18) (91%), Linux 2.6.32 (91%),
+Linux 3.8 - 3.9 (91%), Linux 5.15 (91%), Linux 5.4 - 5.8 (91%), Linux 6.17
+(91%), Linux 6.8 (91%)
+No
